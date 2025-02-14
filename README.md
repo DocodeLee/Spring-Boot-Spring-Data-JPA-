@@ -51,4 +51,9 @@ when you add this tag on class spring boot scan the file and recognize that clas
 
 ## you can set @Primary to give bean priority
 
+## when we don't give bean name method will be bean name
+
+# when @Autowired comes > spring boot tries to use that without class
+
+### we also has setter injections but the Most used one is Constructor Injection
 
