@@ -57,3 +57,13 @@ when you add this tag on class spring boot scan the file and recognize that clas
 
 ### we also has setter injections but the Most used one is Constructor Injection
 
+## @PropertySource
+when inject source from outside of application.properties
+
+for one : use @PropertySource 
+
+for multiple : use @PropertySources({   @PropertySource....   })
+@PropertySources({
+        @PropertySource("classpath:custom.properties"),
+        @PropertySource("classpath:custom-file-2.properties")
+})
