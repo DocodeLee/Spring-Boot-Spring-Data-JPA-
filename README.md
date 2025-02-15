@@ -67,3 +67,5 @@ for multiple : use @PropertySources({   @PropertySource....   })
         @PropertySource("classpath:custom.properties"),
         @PropertySource("classpath:custom-file-2.properties")
 })
+
+### $ in @Value > refer to external configuration file
