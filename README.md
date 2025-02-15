@@ -69,3 +69,12 @@ for multiple : use @PropertySources({   @PropertySource....   })
 })
 
 ### $ in @Value > refer to external configuration file
+
+# Spring Profiles
+Actually even now i cannot understand why we learned this concepts but when we have several application.properties
+
+we can make our projects more environmentic specifically
+
+## @Profile >> make a bean profile specifically 
+<img width="657" alt="image" src="https://github.com/user-attachments/assets/6e3ee938-a93b-492b-b17a-f475e0c48041" />
+SingletoneMap(Key,Value) >> Value set profile
