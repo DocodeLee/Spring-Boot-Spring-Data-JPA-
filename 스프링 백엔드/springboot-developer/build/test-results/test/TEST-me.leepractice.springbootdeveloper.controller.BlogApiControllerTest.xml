@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="me.leepractice.springbootdeveloper.controller.BlogApiControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-02-24T12:56:52" hostname="Lees-MacBook.local" time="0.453">
+  <properties/>
+  <testcase name="deleteArticle : 블로그 글 삭제 성공" classname="me.leepractice.springbootdeveloper.controller.BlogApiControllerTest" time="0.398"/>
+  <testcase name="FindAllArticles: 블로그 글 목록 조회에 성" classname="me.leepractice.springbootdeveloper.controller.BlogApiControllerTest" time="0.031"/>
+  <testcase name="addArticle : 블로그  추가에 성공" classname="me.leepractice.springbootdeveloper.controller.BlogApiControllerTest" time="0.022"/>
+  <system-out><![CDATA[21:56:51.096 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [me.leepractice.springbootdeveloper.controller.BlogApiControllerTest]: BlogApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:56:51.147 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration me.leepractice.springbootdeveloper.SpringBootDeveloperApplication for test class me.leepractice.springbootdeveloper.controller.BlogApiControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+?[32m :: Spring Boot :: ?[39m              ?[2m (v3.2.0)?[0;39m
+
+?[2m2025-02-24T21:56:51.291+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mm.l.s.controller.BlogApiControllerTest  ?[0;39m ?[2m:?[0;39m Starting BlogApiControllerTest using Java 23.0.1 with PID 25476 (started by leehyunil in /Users/leehyunil/Desktop/develop/springboot-developer)
+?[2m2025-02-24T21:56:51.291+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mm.l.s.controller.BlogApiControllerTest  ?[0;39m ?[2m:?[0;39m No active profile set, falling back to 1 default profile: "default"
+?[2m2025-02-24T21:56:51.509+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36m.s.d.r.c.RepositoryConfigurationDelegate?[0;39m ?[2m:?[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[2m2025-02-24T21:56:51.527+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36m.s.d.r.c.RepositoryConfigurationDelegate?[0;39m ?[2m:?[0;39m Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+?[2m2025-02-24T21:56:51.683+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mcom.zaxxer.hikari.HikariDataSource      ?[0;39m ?[2m:?[0;39m HikariPool-1 - Starting...
+?[2m2025-02-24T21:56:51.754+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mcom.zaxxer.hikari.pool.HikariPool       ?[0;39m ?[2m:?[0;39m HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+?[2m2025-02-24T21:56:51.754+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mcom.zaxxer.hikari.HikariDataSource      ?[0;39m ?[2m:?[0;39m HikariPool-1 - Start completed.
+?[2m2025-02-24T21:56:51.782+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.hibernate.jpa.internal.util.LogHelper ?[0;39m ?[2m:?[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+?[2m2025-02-24T21:56:51.802+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36morg.hibernate.Version                   ?[0;39m ?[2m:?[0;39m HHH000412: Hibernate ORM core version 6.3.1.Final
+?[2m2025-02-24T21:56:51.815+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.h.c.internal.RegionFactoryInitiator   ?[0;39m ?[2m:?[0;39m HHH000026: Second-level cache disabled
+?[2m2025-02-24T21:56:51.898+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.o.j.p.SpringPersistenceUnitInfo     ?[0;39m ?[2m:?[0;39m No LoadTimeWeaver setup: ignoring JPA class transformer
+?[2m2025-02-24T21:56:52.202+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.h.e.t.j.p.i.JtaPlatformInitiator      ?[0;39m ?[2m:?[0;39m HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists article cascade 
+Hibernate: 
+    create table article (
+        id bigint generated by default as identity,
+        content varchar(255) not null,
+        title varchar(255) not null,
+        primary key (id)
+    )
+?[2m2025-02-24T21:56:52.213+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mj.LocalContainerEntityManagerFactoryBean?[0;39m ?[2m:?[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[2m2025-02-24T21:56:52.354+09:00?[0;39m ?[33m WARN?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mJpaBaseConfiguration$JpaWebConfiguration?[0;39m ?[2m:?[0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[2m2025-02-24T21:56:52.468+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.b.a.h2.H2ConsoleAutoConfiguration   ?[0;39m ?[2m:?[0;39m H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+?[2m2025-02-24T21:56:52.492+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.b.t.m.w.SpringBootMockServletContext?[0;39m ?[2m:?[0;39m Initializing Spring TestDispatcherServlet ''
+?[2m2025-02-24T21:56:52.492+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.t.web.servlet.TestDispatcherServlet ?[0;39m ?[2m:?[0;39m Initializing Servlet ''
+?[2m2025-02-24T21:56:52.493+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.t.web.servlet.TestDispatcherServlet ?[0;39m ?[2m:?[0;39m Completed initialization in 0 ms
+?[2m2025-02-24T21:56:52.506+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mm.l.s.controller.BlogApiControllerTest  ?[0;39m ?[2m:?[0;39m Started BlogApiControllerTest in 1.308 seconds (process running for 1.769)
+?[2m2025-02-24T21:56:52.770+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.b.t.m.w.SpringBootMockServletContext?[0;39m ?[2m:?[0;39m Initializing Spring TestDispatcherServlet ''
+?[2m2025-02-24T21:56:52.770+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.t.web.servlet.TestDispatcherServlet ?[0;39m ?[2m:?[0;39m Initializing Servlet ''
+?[2m2025-02-24T21:56:52.770+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.t.web.servlet.TestDispatcherServlet ?[0;39m ?[2m:?[0;39m Completed initialization in 0 ms
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0
+Hibernate: 
+    delete 
+    from
+        article 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        article 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        article 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        article
+        (content, title, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0 
+    where
+        a1_0.id=?
+Hibernate: 
+    delete 
+    from
+        article 
+    where
+        id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0
+?[2m2025-02-24T21:56:52.912+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.b.t.m.w.SpringBootMockServletContext?[0;39m ?[2m:?[0;39m Initializing Spring TestDispatcherServlet ''
+?[2m2025-02-24T21:56:52.912+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.t.web.servlet.TestDispatcherServlet ?[0;39m ?[2m:?[0;39m Initializing Servlet ''
+?[2m2025-02-24T21:56:52.912+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.t.web.servlet.TestDispatcherServlet ?[0;39m ?[2m:?[0;39m Completed initialization in 0 ms
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0
+Hibernate: 
+    insert 
+    into
+        article
+        (content, title, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0
+?[2m2025-02-24T21:56:52.943+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.b.t.m.w.SpringBootMockServletContext?[0;39m ?[2m:?[0;39m Initializing Spring TestDispatcherServlet ''
+?[2m2025-02-24T21:56:52.943+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.t.web.servlet.TestDispatcherServlet ?[0;39m ?[2m:?[0;39m Initializing Servlet ''
+?[2m2025-02-24T21:56:52.944+09:00?[0;39m ?[32m INFO?[0;39m ?[35m25476?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.t.web.servlet.TestDispatcherServlet ?[0;39m ?[2m:?[0;39m Completed initialization in 1 ms
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0
+Hibernate: 
+    delete 
+    from
+        article 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        article
+        (content, title, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/leehyunil/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.10/90ed94ac044ea8953b224304c762316e91fd6b31/byte-buddy-agent-1.14.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
